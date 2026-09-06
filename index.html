@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forma Orange &mdash; Cadastral Fragment Transcriptions</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""/>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Times New Roman", Times, serif;
+  }
+  #map {
+    width: 100%;
+    height: 100vh;
+    background: #e8e4da;
+  }
+  .plaque-label {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    color: #7a0000;
+    text-align: center;
+    line-height: 1.05;
+    white-space: pre;
+    text-shadow:
+      -1px -1px 0 #fff, 1px -1px 0 #fff,
+      -1px 1px 0 #fff, 1px 1px 0 #fff,
+      0 0 3px #fff;
+    pointer-events: none;
+    user-select: none;
+  }
+  .plaque-polygon {
+    fill: #ffcc66;
+    fill-opacity: 0.15;
+    stroke: #7a0000;
+    stroke-width: 1.5;
+  }
+  .leaflet-control-layers label {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+  }
+  #title-box {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    z-index: 1000;
+    background: rgba(255,255,255,0.9);
+    padding: 6px 14px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    max-width: 320px;
+  }
+  #title-box h1 {
+    font-size: 15px;
+    margin: 0 0 2px 0;
+  }
+  #title-box p {
+    margin: 0;
+    font-size: 11px;
+    color: #444;
+  }
+  .plaque-tooltip {
+    font-family: "Courier New", Courier, monospace;
+    white-space: pre;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div id="title-box">
+  <h1>Forma Orange B &mdash; Cadastral Fragments</h1>
+  <p>82 traced fragments with transcribed inscriptions, overlaid on the modern IGN topographic base. Toggle the transcription layer in the top-right control.</p>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+<script src="app.js"></script>
+
+</body>
+</html>
